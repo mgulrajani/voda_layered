@@ -41,6 +41,19 @@ public class Employee implements Serializable {
 	public void setDoj(LocalDate doj) {
 		this.doj = doj;
 	}
+	
+	public Employee(String name, double salary, LocalDate doj, String dept) {
+		super();
+		this.name = name;
+		this.salary = salary;
+		this.doj = doj;
+		this.dept = dept;
+	}
+	public Employee(String name, double salary) {
+		super();
+		this.name = name;
+		this.salary = salary;
+	}
 	public Employee(int id, String name, double salary, LocalDate doj, String dept) {
 		super();
 		this.id = id;

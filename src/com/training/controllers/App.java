@@ -12,22 +12,21 @@ public class App {
 		
 		 IEmployeeService service = new EmployeeService();
 		System.out.println(service.addEmployee(new 
-				Employee(111,"jaya",400000,LocalDate.now())));
-	    try {
-			service.updateEmployee(111,new
-					Employee(111,"gayatri",343434,LocalDate.now()));
-		
-		System.out.println(service.getAllEmployees());
-		
-		System.out.println(service.getEmployeeById(111));
-		
-		System.out.println(service.deleteEmployee(111));
-		
-	}
-		 catch (IdNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-	
-
+				Employee("meenal",3400000,LocalDate.now(),"Customer service")));
+		service.addEmployee(new 
+				Employee("suresh",4800000,LocalDate.now().minusYears(2),"Legal Head"));
+		 System.out.println(service.getAllEmployees());
+		 
+				  try { service.updateEmployee(111,new
+				  Employee(111,"gayatri",343434,LocalDate.now(),"Finance"));
+				  
+				  
+				  System.out.println(service.getEmployeeById(112));
+				  
+				  System.out.println(service.deleteEmployee(112));
+				  
+				  } catch (IdNotFoundException e) { // TODO Auto-generated catch block
+				  e.printStackTrace(); }
+				  
+				 
 }}
